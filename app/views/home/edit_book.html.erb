@@ -1,0 +1,14 @@
+<div class="row-fluid">
+  <div class="col-md-12">
+	<%= simple_form_for @book, :url => update_book_home_path(@book) do |f| %>
+	  <div class="col-md-offset-4 col-md-4">
+	  	<h4>Edit the book</h4>
+	    <%= render 'form', :f => f  %>
+	      <%= button_tag(type: 'submit', class: "btn btn-primary btn-xs") do %>
+	        <i class="fa fa-check"></i> Edit Book
+	      <% end %>
+	      <%= link_to raw("#{fa_icon("times")} #{t("cancel")}"), home_index_path, class: "btn btn-default btn-xs" %>
+	  </div>
+	<% end %>
+</div>
+</div>

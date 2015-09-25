@@ -1,0 +1,26 @@
+<div class="modal fade medium" id="borrow" tabindex="-1" role="dialog" aria-labelledby="borrow" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><%= t("cancel") %></span></button>
+        <h4 class="modal-title"><%= raw("#{fa_icon("plus")} Borrow this book") %></h4>
+      </div>
+		  <%= simple_form_for 'borrow_book', url: borrow_book_home_path(book), html: { :class => "form-horizontal"}, :remote => true do |f| %>
+      	<div class="modal-body">
+
+      		<div class="control-group borrow_form">
+      		  	<%= f.input :user_id, :collection => @users, label_method: :email, value_method: :id, :label => "Select a user" %>	
+			    </div>
+
+      	</div>
+
+        <div class="modal-footer">
+          <%= f.button :button, :class => 'btn btn-primary' do %>
+            <i class="fa fa-check"></i> Borrow
+          <% end %>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= raw("#{fa_icon("times")} #{t("cancel")}") %></button>
+        </div>
+		<% end %>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

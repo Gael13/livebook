@@ -1,0 +1,22 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#brand {
+	font-size: 28px;
+	font-family: 'Lobster';
+	color: white;
+	margin: 10px 0 0 500px;
+}
+
+.title_books {
+	text-align:center;
+}
+
+.borrow_form {
+  margin: 0 10px 0 10px;
+}

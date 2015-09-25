@@ -1,0 +1,6 @@
+<%#= b.user.to_json %>
+<% unless b.user.nil? %>
+  <%= b.user.email %>
+<% else %>
+  <%= link_to raw("#{fa_icon("plus")} Borrow the book"), "", :class => 'btn btn-primary btn-xs',:data => {:toggle => "modal", :target => "#borrow"} %>
+<% end %>

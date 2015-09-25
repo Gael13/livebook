@@ -1,0 +1,44 @@
+<div class="row-fluid" style="margin-left: 50px;margin-right: 50px;">
+  <div class="col-md-12" style="margin-bottom: 40px;">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">The livebook platform !</h3>
+      </div>
+      <div class="panel-body">
+        An application for your books
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid" style="margin: 20px 20px 0 20px;">
+  <div class="col-md-12">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#mybooks" aria-controls="mybooks" role="tab" data-toggle="tab">All my books</a></li>
+      <li role="presentation"><a href="#borrow" aria-controls="borrow" role="tab" data-toggle="tab">The books I borrowed</a></li>
+      <li role="presentation"><a href="#lend" aria-controls="lend" role="tab" data-toggle="tab">The books I lent</a></li>
+    </ul>
+
+    <div class="tab-content" style="margin-top: 30px;">
+      <div role="tabpanel" class="tab-pane active" id="mybooks">
+        <div id="all_books">
+          <%= render 'home/all_books', book: @books %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="borrow">
+        <div id="books_borrowed">
+          <%= render 'home/books_borrowed', book: @books_b %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="lend">
+        <div id="books_lent">
+          <%= render 'home/books_lent', book: @books_l %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+

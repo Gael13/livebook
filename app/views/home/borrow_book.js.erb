@@ -1,0 +1,6 @@
+$("#borrow").modal('hide');
+
+setTimeout(function (){
+	$("#borrow_btn").html("<%= escape_javascript(render 'home/borrow_btn', :b => @book) %>");
+	$("#borrow_btn").last().effect("highlight",{color: '#5bc0de'},2000);
+	}, 500);

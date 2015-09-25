@@ -1,0 +1,29 @@
+<div class="row-fluid">
+	<div class="col-md-12">
+		<h3 class="title_books">My Books</h3>
+		<%= link_to raw("#{fa_icon 'plus'} Add a book"), new_book_home_index_path, class: "btn btn-info btn-xs btn-block", :style => 'margin-bottom:5px;' %>
+		<table class="table table-striped table-bordered">
+		  <thead>
+		    <tr>
+		      <th class="title_books">Title</th>
+		      <th class="title_books">Author</th>
+		      <th class="title_books">Lend</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <% book.each do |b| %>
+		      <tr>
+		        <td class="link_line">
+		          <%= link_to fa_icon("times-circle fw"), destroy_book_home_path(b), method: :delete, data: { confirm: "Are you sure to delete the book ?"  } %>
+		          <%= link_to sanitize(b.title), edit_book_home_path(b), :class => "link_all_line" %></td>
+		        <td><%= b.author %></td>
+		        <td id="borrow_btn" style="width:150px;">
+		          <%= render 'home/borrow_btn', :b => b %>
+		          <%= render 'home/borrow_book_modal', :book => b %>
+		        </td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
+</div>
