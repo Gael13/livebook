@@ -7,8 +7,6 @@ class HomeController < ApplicationController
     @books = Book.where(owner_id: current_user.id)
     @books_b = BookBorrow.where(user_id: current_user.id)
     @books_l = BookBorrow.where.not(user_id: current_user.id)
- 
-    logger.info("ALLO #{@b.to_json}")
     @users = User.where.not(id: current_user.id)
   end
 

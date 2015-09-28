@@ -13,7 +13,7 @@
 		  <tbody>
 		    <% book.each do |b| %>
 		      <tr>
-		        <td class="link_line">
+		        <td>
 		          <%= link_to fa_icon("times-circle fw"), destroy_book_home_path(b), method: :delete, data: { confirm: "Are you sure to delete the book ?"  } %>
 		          <%= link_to sanitize(b.title), edit_book_home_path(b), :class => "link_all_line" %></td>
 		        <td><%= b.author %></td>

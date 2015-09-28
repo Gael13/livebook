@@ -43,6 +43,14 @@ group :development, :test do # <<<< :development, not devlopment
   gem 'byebug'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.0'
+  gem "factory_girl_rails", "4.4.1"
+end
+
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'

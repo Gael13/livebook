@@ -15,8 +15,8 @@
   <div class="col-md-12">
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a href="#mybooks" aria-controls="mybooks" role="tab" data-toggle="tab">All my books</a></li>
-      <li role="presentation"><a href="#borrow" aria-controls="borrow" role="tab" data-toggle="tab">The books I borrowed</a></li>
-      <li role="presentation"><a href="#lend" aria-controls="lend" role="tab" data-toggle="tab">The books I lent</a></li>
+      <li role="presentation"><a href="#borrow_book" aria-controls="borrow_book" role="tab" data-toggle="tab">The books I borrowed</a></li>
+      <li role="presentation"><a href="#lend_book" aria-controls="lend_book" role="tab" data-toggle="tab">The books I lent</a></li>
     </ul>
 
     <div class="tab-content" style="margin-top: 30px;">
@@ -25,12 +25,12 @@
           <%= render 'home/all_books', book: @books %>
         </div>
       </div>
-      <div role="tabpanel" class="tab-pane" id="borrow">
+      <div role="tabpanel" class="tab-pane" id="borrow_book">
         <div id="books_borrowed">
           <%= render 'home/books_borrowed', book: @books_b %>
         </div>
       </div>
-      <div role="tabpanel" class="tab-pane" id="lend">
+      <div role="tabpanel" class="tab-pane" id="lend_book">
         <div id="books_lent">
           <%= render 'home/books_lent', book: @books_l %>
         </div>
